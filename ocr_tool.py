@@ -4,7 +4,6 @@ from pdf2image import convert_from_path
 from PyPDF2 import PdfWriter, PdfReader
 import io
 
-# The corrected path from our previous troubleshooting
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Jorgette\Sofi-AI\OCR\tesseract.exe'
 POPPLER_PATH = r'C:\Users\Jorgette\Downloads\poppler-25.12.0\Library\bin' 
 
