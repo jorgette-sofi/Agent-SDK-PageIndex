@@ -6,3 +6,4 @@ python-dotenv
 pytesseract
 pdf2image
 PyPDF2
+pyyaml

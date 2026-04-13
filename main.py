@@ -2,7 +2,9 @@ import os
 import re
 import time
 import json
+import yaml
 import telebot
+from datetime import datetime
 from dotenv import load_dotenv
 from pageindex import PageIndexClient
 from openai import OpenAI
@@ -199,13 +201,12 @@ tools_menu = [{
     }
 }]
 
-def read_text_file(filename, default_text="You are a helpful AI."):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as file:
-            return file.read().strip()
-    return default_text
+with open("prompt.yaml", "r", encoding="utf-8") as f:
+    _prompts = yaml.safe_load(f)
 
-system_prompt = read_text_file("system_prompt.txt", default_text="You are a helpful AI assistant.")
+_current_date = datetime.now().strftime("%B %d, %Y")
+system_instructions = f"{_prompts['system_prompt']}\n(Context: Today's date is {_current_date})"
+help_prompt = _prompts["help_prompt"]
 user_memories = {}
 
 # 4. TELEGRAM BOT HANDLERS
@@ -231,12 +232,7 @@ def send_welcome(message):
 @bot.message_handler(commands=['help'])
 def send_help(message):
     chat_id = message.chat.id
-    try:
-        with open("helpPrompt.txt", "r", encoding="utf-8") as file:
-            helpGuide = file.read()
-        bot.send_message(chat_id, helpGuide, parse_mode='HTML')
-    except Exception:
-        bot.send_message(chat_id, "To view help, use the command: /help", parse_mode='HTML')
+    bot.send_message(chat_id, help_prompt, parse_mode='HTML')
 
 @bot.message_handler(func=lambda msg: msg.text.strip().lower() in ['#clear', '/clear'])
 def clear_history(message):
