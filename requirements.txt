@@ -1,0 +1,8 @@
+supabase
+pageindex
+openai
+pyTelegramBotAPI
+python-dotenv
+pytesseract
+pdf2image
+PyPDF2

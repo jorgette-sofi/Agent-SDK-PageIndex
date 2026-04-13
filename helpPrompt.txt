@@ -1,0 +1,42 @@
+<b>Best Practices sa Pakikipag Usap sa Home Along Bot</b>
+
+<b>1. Itanong nang Direkta ang Kailangan mong Detalye o ang iyong concern</b>
+     Kung may hinahanap kang specific na amount, petsa, o model, isama ito sa tanong mo.
+<b>X Wag:</b> <i>"Paano yung discount sa Condura?"</i>
+<b>✓ Gawin:</b> <i>"Magkano ang discount para sa Condura Flush Out Program?"</i>
+- Sasagot ang bot ng: For every purchase of selected Condura products, customers will receive a Php500.00 discount.
+
+<b>2. General to Specific ang pagtatanong</b> 
+   Kung di pa alam ang files na isesearch, maaring magtanong ng mga general na tanong sa AI tulad ng mga sumusunod:
+     • <i>Anong latest promo this month?</i>
+     • <i>Anong policies natin tungkol dito?</i> 
+     • <i>Ano-anong mga documents ang tungkol sa Hanabishi?</i>
+   Magbibigay ang AI ng mga listahan ng mga documents na related sa mga tanong na ito, na pwede kang mag-follow-up na tanong hanggang malaman mo ang hinahanap mong sagot.
+
+<b>3. Maging Specific sa Title ng Promo o Policy</b>
+   Kung alam mo ang policy na nais mong hanapin, mas mabilis mahahanap ng bot ang sagot kung ibibigay mo ang eksaktong pangalan ng program o memo.
+<b>X Wag:</b> <i>"May promo ba tayo sa ref?"</i>
+<b>✓ Gawin:</b> <i>"Ano ang details ng Condura Flush Out Program?"</i>
+
+<b>4. Magtanong ng "Kailan" (Dates)</b> 
+   Pwede mong i-check ang validity ng mga promos o kung sino ang nag-issue ng memo.
+<b>Tanong:</b> <i>"Kailan ang effective date ng Condura Flush Out Program?"</i>
+<b>Sagot ng bot:</b> Effective Date: March 01 - March 31, 2026.
+
+<b>Sample Scenario: May Customer na Nagtatanong</b>
+   Imagine may customer na pumasok at nagtatanong kung anong mga washing machine o ref ang pasok sa bagong promo. Pwede mong i-type agad ito sa Telegram:
+<b>Ikaw:</b> <i>"Anong mga participating products sa Condura Flush Out program?"</i>
+<b>Bot:</b> Ang mga participating products ay ang mga sumusunod: 
+     • CDI.CUF800MNi 
+     • CDI.CWM7.5TLDN 
+     • CDI.CWM8.5TLDi
+
+<b>5. Pwede mag follow up Questions!</b> 
+   Nakakaalala ang bot ng ating pinag-uusapan, kaya pwede kang mag follow up sa mga sagot n’ya! 
+<b>Halimbawa:</b> Kung nagtanong ka na tungkol sa Condura promo, pwede kang mag-follow up ng: <i>'Hanggang kailan uli ito?'</i> nang hindi na inuulit ang buong pangalan ng promo.
+
+<b>6. Telegram Commands (Mga Shortcuts)</b>
+Mabilisang commands na pwede mong i-type:
+<code>/start</code> - Para i-restart o simulan ang chat.
+<code>#clear</code> - Para burahin ang current memory ng bot at mag-start ng bagong topic (para iwas kuryente sa sagot).
+<code>/help</code> - Para makita uli ang guide na ito.
