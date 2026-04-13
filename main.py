@@ -74,7 +74,7 @@ for cached_file, doc_id in uploaded_cache.items():
         except Exception as e:
             print(f"  [!] Failed to delete {cached_file} from PageIndex (might already be gone): {e}")
         files_to_remove.append(cached_file)
-# CLEANUP
+#-------------------------------------------------------
 
 doc_ids = list(uploaded_cache.values())
 new_uploads = False
